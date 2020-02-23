@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BFA761524001066001E2F51 /* Tuile.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761424001066001E2F51 /* Tuile.entitlements */; };
+		4BFA761724001066001E2F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA761624001066001E2F51 /* AppDelegate.swift */; };
+		4BFA761A24001066001E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761824001066001E2F51 /* Main.storyboard */; };
+		4BFA761C24001066001E2F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA761B24001066001E2F51 /* ViewController.swift */; };
+		4BFA761E24001067001E2F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761D24001067001E2F51 /* Assets.xcassets */; };
+		4BFA762524001067001E2F51 /* Tuile Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4BFA762424001067001E2F51 /* Tuile Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4BFA762A24001067001E2F51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFA762924001067001E2F51 /* Cocoa.framework */; };
+		4BFA762D24001067001E2F51 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA762C24001067001E2F51 /* SafariExtensionHandler.swift */; };
+		4BFA762F24001067001E2F51 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA762E24001067001E2F51 /* SafariExtensionViewController.swift */; };
+		4BFA763224001067001E2F51 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA763024001067001E2F51 /* SafariExtensionViewController.xib */; };
+		4BFA763524001067001E2F51 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA763424001067001E2F51 /* script.js */; };
+		4BFA763724001067001E2F51 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA763624001067001E2F51 /* ToolbarItemIcon.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BFA762624001067001E2F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BFA760924001066001E2F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BFA762324001067001E2F51;
+			remoteInfo = "Tuile Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BFA763E24001067001E2F51 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4BFA762524001067001E2F51 /* Tuile Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4BFA761124001066001E2F51 /* Tuile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFA761424001066001E2F51 /* Tuile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tuile.entitlements; sourceTree = "<group>"; };
+		4BFA761624001066001E2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BFA761924001066001E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BFA761B24001066001E2F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BFA761D24001067001E2F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BFA761F24001067001E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFA762424001067001E2F51 /* Tuile Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tuile Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFA762924001067001E2F51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4BFA762C24001067001E2F51 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		4BFA762E24001067001E2F51 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		4BFA763124001067001E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		4BFA763324001067001E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFA763424001067001E2F51 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		4BFA763624001067001E2F51 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		4BFA763824001067001E2F51 /* Tuile_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tuile_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BFA760E24001066001E2F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFA762124001067001E2F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFA762A24001067001E2F51 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BFA760824001066001E2F51 = {
+			isa = PBXGroup;
+			children = (
+				4BFA761324001066001E2F51 /* Tuile */,
+				4BFA762B24001067001E2F51 /* Tuile Extension */,
+				4BFA762824001067001E2F51 /* Frameworks */,
+				4BFA761224001066001E2F51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BFA761224001066001E2F51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA761124001066001E2F51 /* Tuile.app */,
+				4BFA762424001067001E2F51 /* Tuile Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BFA761324001066001E2F51 /* Tuile */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA761424001066001E2F51 /* Tuile.entitlements */,
+				4BFA761624001066001E2F51 /* AppDelegate.swift */,
+				4BFA761824001066001E2F51 /* Main.storyboard */,
+				4BFA761B24001066001E2F51 /* ViewController.swift */,
+				4BFA761D24001067001E2F51 /* Assets.xcassets */,
+				4BFA761F24001067001E2F51 /* Info.plist */,
+			);
+			path = Tuile;
+			sourceTree = "<group>";
+		};
+		4BFA762824001067001E2F51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA762924001067001E2F51 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BFA762B24001067001E2F51 /* Tuile Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA762C24001067001E2F51 /* SafariExtensionHandler.swift */,
+				4BFA762E24001067001E2F51 /* SafariExtensionViewController.swift */,
+				4BFA763024001067001E2F51 /* SafariExtensionViewController.xib */,
+				4BFA763324001067001E2F51 /* Info.plist */,
+				4BFA763424001067001E2F51 /* script.js */,
+				4BFA763624001067001E2F51 /* ToolbarItemIcon.pdf */,
+				4BFA763824001067001E2F51 /* Tuile_Extension.entitlements */,
+			);
+			path = "Tuile Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BFA761024001066001E2F51 /* Tuile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BFA763F24001067001E2F51 /* Build configuration list for PBXNativeTarget "Tuile" */;
+			buildPhases = (
+				4BFA760D24001066001E2F51 /* Sources */,
+				4BFA760E24001066001E2F51 /* Frameworks */,
+				4BFA760F24001066001E2F51 /* Resources */,
+				4BFA763E24001067001E2F51 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BFA762724001067001E2F51 /* PBXTargetDependency */,
+			);
+			name = Tuile;
+			productName = Tuile;
+			productReference = 4BFA761124001066001E2F51 /* Tuile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BFA762324001067001E2F51 /* Tuile Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BFA763B24001067001E2F51 /* Build configuration list for PBXNativeTarget "Tuile Extension" */;
+			buildPhases = (
+				4BFA762024001067001E2F51 /* Sources */,
+				4BFA762124001067001E2F51 /* Frameworks */,
+				4BFA762224001067001E2F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tuile Extension";
+			productName = "Tuile Extension";
+			productReference = 4BFA762424001067001E2F51 /* Tuile Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BFA760924001066001E2F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Anthony Da Mota";
+				TargetAttributes = {
+					4BFA761024001066001E2F51 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					4BFA762324001067001E2F51 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4BFA760C24001066001E2F51 /* Build configuration list for PBXProject "Tuile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BFA760824001066001E2F51;
+			productRefGroup = 4BFA761224001066001E2F51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BFA761024001066001E2F51 /* Tuile */,
+				4BFA762324001067001E2F51 /* Tuile Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BFA760F24001066001E2F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFA761524001066001E2F51 /* Tuile.entitlements in Resources */,
+				4BFA761E24001067001E2F51 /* Assets.xcassets in Resources */,
+				4BFA761A24001066001E2F51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFA762224001067001E2F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFA763724001067001E2F51 /* ToolbarItemIcon.pdf in Resources */,
+				4BFA763224001067001E2F51 /* SafariExtensionViewController.xib in Resources */,
+				4BFA763524001067001E2F51 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BFA760D24001066001E2F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFA761C24001066001E2F51 /* ViewController.swift in Sources */,
+				4BFA761724001066001E2F51 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFA762024001067001E2F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFA762F24001067001E2F51 /* SafariExtensionViewController.swift in Sources */,
+				4BFA762D24001067001E2F51 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BFA762724001067001E2F51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BFA762324001067001E2F51 /* Tuile Extension */;
+			targetProxy = 4BFA762624001067001E2F51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BFA761824001066001E2F51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BFA761924001066001E2F51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BFA763024001067001E2F51 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BFA763124001067001E2F51 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BFA763924001067001E2F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BFA763A24001067001E2F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4BFA763C24001067001E2F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Tuile Extension/Tuile_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S35472353D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Tuile Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akdm.Tuile-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4BFA763D24001067001E2F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Tuile Extension/Tuile_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S35472353D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Tuile Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akdm.Tuile-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4BFA764024001067001E2F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tuile/Tuile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S35472353D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Tuile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akdm.Tuile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4BFA764124001067001E2F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tuile/Tuile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S35472353D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Tuile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akdm.Tuile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BFA760C24001066001E2F51 /* Build configuration list for PBXProject "Tuile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFA763924001067001E2F51 /* Debug */,
+				4BFA763A24001067001E2F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BFA763B24001067001E2F51 /* Build configuration list for PBXNativeTarget "Tuile Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFA763C24001067001E2F51 /* Debug */,
+				4BFA763D24001067001E2F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BFA763F24001067001E2F51 /* Build configuration list for PBXNativeTarget "Tuile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFA764024001067001E2F51 /* Debug */,
+				4BFA764124001067001E2F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BFA760924001066001E2F51 /* Project object */;
+}
