@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1B2402895C0057FC31 /* Tuile.swift */; };
+		4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */; };
 		4BFA761524001066001E2F51 /* Tuile.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761424001066001E2F51 /* Tuile.entitlements */; };
 		4BFA761724001066001E2F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA761624001066001E2F51 /* AppDelegate.swift */; };
 		4BFA761A24001066001E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761824001066001E2F51 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B7D9D1B2402895C0057FC31 /* Tuile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuile.swift; sourceTree = "<group>"; };
+		4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		4BFA761124001066001E2F51 /* Tuile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFA761424001066001E2F51 /* Tuile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tuile.entitlements; sourceTree = "<group>"; };
 		4BFA761624001066001E2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7D9D1D240289D50057FC31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4BFA760824001066001E2F51 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,8 @@
 		4BFA762B24001067001E2F51 /* Tuile Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4B7D9D1D240289D50057FC31 /* Models */,
+				4B7D9D1B2402895C0057FC31 /* Tuile.swift */,
 				4BFA762C24001067001E2F51 /* SafariExtensionHandler.swift */,
 				4BFA762E24001067001E2F51 /* SafariExtensionViewController.swift */,
 				4BFA763024001067001E2F51 /* SafariExtensionViewController.xib */,
@@ -252,6 +266,8 @@
 			files = (
 				4BFA762F24001067001E2F51 /* SafariExtensionViewController.swift in Sources */,
 				4BFA762D24001067001E2F51 /* SafariExtensionHandler.swift in Sources */,
+				4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */,
+				4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
