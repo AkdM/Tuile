@@ -77,9 +77,11 @@ class Tuile {
     
     func getProperties(page: SFSafariPage?, completion: @escaping (String?, URL?, Bool?) -> ()) {
         page?.getPropertiesWithCompletionHandler({ (p) in
-            if let properties = p {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let properties = p {
                     completion(properties.title, properties.url, properties.usesPrivateBrowsing)
+                } else {
+                    completion("New tab", URL.init(string: "about:blank"), false)
                 }
             }
         })
