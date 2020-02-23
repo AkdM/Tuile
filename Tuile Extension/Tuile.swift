@@ -66,24 +66,23 @@ class Tuile {
     }
     
     func getTab(tab: SFSafariTab, completion: @escaping (TuileTab) -> ()) {
+        let group = DispatchGroup()
+        var title: String?
+        var url: URL?
+        var isPrivate: Bool?
+
+        group.enter()
         tab.getActivePage(completionHandler: { (page) in
-            self.getProperties(page: page, completion: { (titleProp, urlProp, privateProp) in
-                DispatchQueue.main.async {
-                    completion(TuileTab(title: titleProp, url: urlProp, isPrivate: privateProp))
-                }
+            
+            page?.getPropertiesWithCompletionHandler({ (p) in
+                title = p?.title ?? "New tab"
+                url = p?.url ?? URL.init(string: "about:blank")
+                isPrivate = p?.usesPrivateBrowsing ?? false
+                group.leave()
             })
         })
-    }
-    
-    func getProperties(page: SFSafariPage?, completion: @escaping (String?, URL?, Bool?) -> ()) {
-        page?.getPropertiesWithCompletionHandler({ (p) in
-            DispatchQueue.main.async {
-                if let properties = p {
-                    completion(properties.title, properties.url, properties.usesPrivateBrowsing)
-                } else {
-                    completion("New tab", URL.init(string: "about:blank"), false)
-                }
-            }
-        })
+        group.notify(queue: .main) {
+            completion(TuileTab(title: title, url: url, isPrivate: isPrivate))
+        }
     }
 }
