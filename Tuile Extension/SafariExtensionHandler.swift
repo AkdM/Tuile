@@ -20,13 +20,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.
         NSLog("The extension's toolbar item was clicked")
-        Tuile.shared.getSession(completion: { (session) in
-            do {
-                let jsonData = try JSONEncoder().encode(session)
-                let jsonString = String(data: jsonData, encoding: .utf8)!
-                print(jsonString)
-            } catch { print(error) }
-        })
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {

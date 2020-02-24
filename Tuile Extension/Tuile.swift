@@ -13,9 +13,12 @@ class Tuile {
     static let shared = Tuile()
 
     func getSession(completion: @escaping (TuileSession) -> ()) {
+        let currentDate = Date.currentAsISO8601String
         SFSafariApplication.getAllWindows { (windows) in
             self.getWindows(windows: windows) { (tuileWindows) in
-                completion(TuileSession(windows: tuileWindows))
+                completion(TuileSession(windows: tuileWindows,
+                                        title: currentDate,
+                                        createdDate: currentDate))
             }
         }
     }

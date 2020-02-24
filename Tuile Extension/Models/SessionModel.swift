@@ -20,4 +20,6 @@ struct TuileWindow: Codable {
 
 struct TuileSession: Codable {
     var windows: [TuileWindow]
+    var title: String
+    var createdDate: String
 }
