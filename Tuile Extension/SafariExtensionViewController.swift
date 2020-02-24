@@ -9,6 +9,7 @@
 import SafariServices
 
 class SafariExtensionViewController: SFSafariExtensionViewController {
+    var tuilePopover = TuilePopover()
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
@@ -16,8 +17,22 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         return shared
     }()
     
+    override func loadView() {
+        tuilePopover.saveSessionButton.action = #selector(self.saveSessionButtonAction(_:))
+        self.view = tuilePopover
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = TuilePopover()
+    }
+    
+    @objc func saveSessionButtonAction(_ sender: NSButton) -> Void {
+        Tuile.shared.getSession(completion: { (session) in
+            do {
+                let jsonData = try JSONEncoder().encode(session)
+                let jsonString = String(data: jsonData, encoding: .utf8)!
+                print(jsonString)
+            } catch { print(error) }
+        })
     }
 }
