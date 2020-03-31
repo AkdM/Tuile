@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+extension String {
+    func toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        let enUSPosixLocale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.locale = enUSPosixLocale
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        let date = dateFormatter.date(from: self)
+        return date
+    }
+}
