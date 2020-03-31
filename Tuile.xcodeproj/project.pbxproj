@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B53E7A224329D850050E3F3 /* TuileModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A024329D850050E3F3 /* TuileModel.xcdatamodeld */; };
+		4B53E7A324329D850050E3F3 /* TuileModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A024329D850050E3F3 /* TuileModel.xcdatamodeld */; };
+		4B53E7A52432A6E00050E3F3 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */; };
+		4B53E7A62432A6E00050E3F3 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */; };
 		4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1B2402895C0057FC31 /* Tuile.swift */; };
 		4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */; };
 		4BF208E324030E9B0097AABB /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF208E224030E9B0097AABB /* SafariExtensionViewController.xib */; };
 		4BF208E524030F1F0097AABB /* TuilePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF208E424030F1F0097AABB /* TuilePopover.swift */; };
-		4BF31F5B24048CCD007F7594 /* Date+ISO8601String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31F5A24048CCD007F7594 /* Date+ISO8601String.swift */; };
+		4BF31F5B24048CCD007F7594 /* Date+currentAsISO8601String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31F5A24048CCD007F7594 /* Date+currentAsISO8601String.swift */; };
+		4BF706712433EAE5009A89F5 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7066F2433EAE5009A89F5 /* Session+CoreDataClass.swift */; };
+		4BF706722433EAE5009A89F5 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7066F2433EAE5009A89F5 /* Session+CoreDataClass.swift */; };
+		4BF706732433EAE5009A89F5 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706702433EAE5009A89F5 /* Session+CoreDataProperties.swift */; };
+		4BF706742433EAE5009A89F5 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706702433EAE5009A89F5 /* Session+CoreDataProperties.swift */; };
+		4BF706772433EC57009A89F5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706762433EC57009A89F5 /* PersistanceManager.swift */; };
+		4BF706782433EC57009A89F5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706762433EC57009A89F5 /* PersistanceManager.swift */; };
+		4BF7067A2434047E009A89F5 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706792434047E009A89F5 /* String+toDate.swift */; };
+		4BF7067B2434047E009A89F5 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF706792434047E009A89F5 /* String+toDate.swift */; };
 		4BFA761524001066001E2F51 /* Tuile.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761424001066001E2F51 /* Tuile.entitlements */; };
 		4BFA761724001066001E2F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA761624001066001E2F51 /* AppDelegate.swift */; };
 		4BFA761A24001066001E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA761824001066001E2F51 /* Main.storyboard */; };
@@ -50,11 +62,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B53E7A124329D850050E3F3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		4B7D9D1B2402895C0057FC31 /* Tuile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuile.swift; sourceTree = "<group>"; };
 		4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		4BF208E224030E9B0097AABB /* SafariExtensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		4BF208E424030F1F0097AABB /* TuilePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuilePopover.swift; sourceTree = "<group>"; };
-		4BF31F5A24048CCD007F7594 /* Date+ISO8601String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ISO8601String.swift"; sourceTree = "<group>"; };
+		4BF31F5A24048CCD007F7594 /* Date+currentAsISO8601String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+currentAsISO8601String.swift"; sourceTree = "<group>"; };
+		4BF7066F2433EAE5009A89F5 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BF706702433EAE5009A89F5 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BF706762433EC57009A89F5 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		4BF706792434047E009A89F5 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
 		4BFA761124001066001E2F51 /* Tuile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFA761424001066001E2F51 /* Tuile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tuile.entitlements; sourceTree = "<group>"; };
 		4BFA761624001066001E2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,9 +120,20 @@
 		4BF31F5924048CB2007F7594 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4BF31F5A24048CCD007F7594 /* Date+ISO8601String.swift */,
+				4BF31F5A24048CCD007F7594 /* Date+currentAsISO8601String.swift */,
+				4BF706792434047E009A89F5 /* String+toDate.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4BF706752433EAFD009A89F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BF7066F2433EAE5009A89F5 /* Session+CoreDataClass.swift */,
+				4BF706702433EAE5009A89F5 /* Session+CoreDataProperties.swift */,
+				4B53E7A024329D850050E3F3 /* TuileModel.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4BFA760824001066001E2F51 = {
@@ -129,12 +158,15 @@
 		4BFA761324001066001E2F51 /* Tuile */ = {
 			isa = PBXGroup;
 			children = (
+				4BF706752433EAFD009A89F5 /* Model */,
 				4BFA761424001066001E2F51 /* Tuile.entitlements */,
 				4BFA761624001066001E2F51 /* AppDelegate.swift */,
 				4BFA761824001066001E2F51 /* Main.storyboard */,
 				4BFA761B24001066001E2F51 /* ViewController.swift */,
 				4BFA761D24001067001E2F51 /* Assets.xcassets */,
 				4BFA761F24001067001E2F51 /* Info.plist */,
+				4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */,
+				4BF706762433EC57009A89F5 /* PersistanceManager.swift */,
 			);
 			path = Tuile;
 			sourceTree = "<group>";
@@ -269,8 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF706732433EAE5009A89F5 /* Session+CoreDataProperties.swift in Sources */,
+				4BF7067A2434047E009A89F5 /* String+toDate.swift in Sources */,
 				4BFA761C24001066001E2F51 /* ViewController.swift in Sources */,
 				4BFA761724001066001E2F51 /* AppDelegate.swift in Sources */,
+				4B53E7A52432A6E00050E3F3 /* CoreDataController.swift in Sources */,
+				4BF706712433EAE5009A89F5 /* Session+CoreDataClass.swift in Sources */,
+				4B53E7A224329D850050E3F3 /* TuileModel.xcdatamodeld in Sources */,
+				4BF706772433EC57009A89F5 /* PersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +316,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF706782433EC57009A89F5 /* PersistanceManager.swift in Sources */,
+				4BF7067B2434047E009A89F5 /* String+toDate.swift in Sources */,
 				4BFA762F24001067001E2F51 /* SafariExtensionViewController.swift in Sources */,
 				4BFA762D24001067001E2F51 /* SafariExtensionHandler.swift in Sources */,
+				4BF706722433EAE5009A89F5 /* Session+CoreDataClass.swift in Sources */,
+				4B53E7A62432A6E00050E3F3 /* CoreDataController.swift in Sources */,
 				4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */,
+				4B53E7A324329D850050E3F3 /* TuileModel.xcdatamodeld in Sources */,
 				4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */,
 				4BF208E524030F1F0097AABB /* TuilePopover.swift in Sources */,
-				4BF31F5B24048CCD007F7594 /* Date+ISO8601String.swift in Sources */,
+				4BF706742433EAE5009A89F5 /* Session+CoreDataProperties.swift in Sources */,
+				4BF31F5B24048CCD007F7594 /* Date+currentAsISO8601String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Tuile Extension/Tuile_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S35472353D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -446,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Tuile Extension/Tuile_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S35472353D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -535,6 +581,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4B53E7A024329D850050E3F3 /* TuileModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4B53E7A124329D850050E3F3 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4B53E7A124329D850050E3F3 /* Model.xcdatamodel */;
+			path = TuileModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4BFA760924001066001E2F51 /* Project object */;
 }

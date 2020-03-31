@@ -12,10 +12,15 @@ import SafariServices.SFSafariApplication
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
+    let persistanceManager = PersistanceManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appNameLabel.stringValue = "Tuile";
+        self.appNameLabel.stringValue = "Tuile"
+        
+//        let session = Session(context: persistanceManager.context)
+//        session.title = "Session title"
+//        persistanceManager.save()
     }
     
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
