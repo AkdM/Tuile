@@ -40,6 +40,18 @@ final class PersistanceManager {
             }
         }
     }
+    
+    func fetch<T: NSManagedObject>(_ objectType: T.Type) -> [T] {
+        let entity = String(describing: objectType)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        do {
+            let fetchedObjects = try context.fetch(fetchRequest) as? [T]
+            return fetchedObjects ?? [T]()
+        } catch {
+            print("Fetch error:\(error)")
+            return [T]()
+        }
+    }
 }
 
 class SharedPersistantContainer: NSPersistentContainer {
