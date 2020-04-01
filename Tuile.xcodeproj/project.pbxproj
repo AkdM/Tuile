@@ -10,7 +10,6 @@
 		4B53E7A52432A6E00050E3F3 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */; };
 		4B53E7A62432A6E00050E3F3 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */; };
 		4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1B2402895C0057FC31 /* Tuile.swift */; };
-		4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */; };
 		4BF208E324030E9B0097AABB /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF208E224030E9B0097AABB /* SafariExtensionViewController.xib */; };
 		4BF208E524030F1F0097AABB /* TuilePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF208E424030F1F0097AABB /* TuilePopover.swift */; };
 		4BF31F5B24048CCD007F7594 /* Date+currentAsISO8601String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31F5A24048CCD007F7594 /* Date+currentAsISO8601String.swift */; };
@@ -72,7 +71,6 @@
 /* Begin PBXFileReference section */
 		4B53E7A42432A6E00050E3F3 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		4B7D9D1B2402895C0057FC31 /* Tuile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuile.swift; sourceTree = "<group>"; };
-		4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		4BF208E224030E9B0097AABB /* SafariExtensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		4BF208E424030F1F0097AABB /* TuilePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuilePopover.swift; sourceTree = "<group>"; };
 		4BF31F5A24048CCD007F7594 /* Date+currentAsISO8601String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+currentAsISO8601String.swift"; sourceTree = "<group>"; };
@@ -121,14 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B7D9D1D240289D50057FC31 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4B7D9D1E24028A0C0057FC31 /* SessionModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		4BF31F5924048CB2007F7594 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				4BF31F5924048CB2007F7594 /* Extensions */,
-				4B7D9D1D240289D50057FC31 /* Models */,
 				4B7D9D1B2402895C0057FC31 /* Tuile.swift */,
 				4BFA762C24001067001E2F51 /* SafariExtensionHandler.swift */,
 				4BF208E224030E9B0097AABB /* SafariExtensionViewController.xib */,
@@ -370,7 +359,6 @@
 				4BFA762D24001067001E2F51 /* SafariExtensionHandler.swift in Sources */,
 				4B53E7A62432A6E00050E3F3 /* CoreDataController.swift in Sources */,
 				4BF7069E2434152D009A89F5 /* Tab+CoreDataProperties.swift in Sources */,
-				4B7D9D1F24028A0C0057FC31 /* SessionModel.swift in Sources */,
 				4B7D9D1C2402895C0057FC31 /* Tuile.swift in Sources */,
 				4BF208E524030F1F0097AABB /* TuilePopover.swift in Sources */,
 				4BF7069224340F83009A89F5 /* Window+CoreDataProperties.swift in Sources */,
