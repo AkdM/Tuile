@@ -30,9 +30,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     @objc func saveSessionButtonAction(_ sender: NSButton) -> Void {
         Tuile.shared.getSession(completion: { (session) in
             do {
-                let newSession = Session(context: self.persistanceManager.context)
-                newSession.title = session.title
-                newSession.created = session.createdDate.toDate()
                 self.persistanceManager.save()
                 
 //                let jsonData = try JSONEncoder().encode(session)

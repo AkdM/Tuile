@@ -11,21 +11,24 @@ import SafariServices
 class Tuile {
     
     static let shared = Tuile()
+    private let persistanceManager = PersistanceManager.shared
 
-    func getSession(completion: @escaping (TuileSession) -> ()) {
+    func getSession(completion: @escaping (Session) -> ()) {
         let currentDate = Date.currentAsISO8601String
         SFSafariApplication.getAllWindows { (windows) in
             self.getWindows(windows: windows) { (tuileWindows) in
-                completion(TuileSession(windows: tuileWindows,
-                                        title: currentDate,
-                                        createdDate: currentDate))
+                let newSession = Session(context: self.persistanceManager.context)
+                newSession.title = currentDate
+                newSession.created = currentDate.toDate()
+                newSession.mutableSetValue(forKey: "windows").addObjects(from: tuileWindows)
+                completion(newSession)
             }
         }
     }
     
-    func getWindows(windows: [SFSafariWindow], completion: @escaping ([TuileWindow]) -> ()) {
+    func getWindows(windows: [SFSafariWindow], completion: @escaping ([Window]) -> ()) {
         let group = DispatchGroup()
-        var tuileWindows: [TuileWindow] = []
+        var tuileWindows: [Window] = []
         for window in windows {
             group.enter()
             self.getWindow(window: window) { (tuileWindow) in
@@ -38,24 +41,24 @@ class Tuile {
         }
     }
     
-    func getWindow(window: SFSafariWindow, completion: @escaping (TuileWindow) -> ()) {
+    func getWindow(window: SFSafariWindow, completion: @escaping (Window) -> ()) {
         let group = DispatchGroup()
-        var tuileWindow: TuileWindow = TuileWindow()
+        let newWindow = Window(context: self.persistanceManager.context)
         group.enter()
         window.getAllTabs(completionHandler: { (tabs) in
             self.getTabs(tabs: tabs) { (tuileTabs) in
-                tuileWindow.tabs = tuileTabs
+                newWindow.mutableSetValue(forKey: "tabs").addObjects(from: tuileTabs)
                 group.leave()
             }
         })
         group.notify(queue: .main) {
-            completion(tuileWindow)
+            completion(newWindow)
         }
     }
     
-    func getTabs(tabs: [SFSafariTab], completion: @escaping ([TuileTab]) -> ()) {
+    func getTabs(tabs: [SFSafariTab], completion: @escaping ([Tab]) -> ()) {
         let group = DispatchGroup()
-        var tuileTabs: [TuileTab] = []
+        var tuileTabs: [Tab] = []
         for tab in tabs {
             group.enter()
             getTab(tab: tab) { (tuileTab) in
@@ -68,7 +71,7 @@ class Tuile {
         }
     }
     
-    func getTab(tab: SFSafariTab, completion: @escaping (TuileTab) -> ()) {
+    func getTab(tab: SFSafariTab, completion: @escaping (Tab) -> ()) {
         let group = DispatchGroup()
         var title: String?
         var url: URL?
@@ -85,7 +88,11 @@ class Tuile {
             })
         })
         group.notify(queue: .main) {
-            completion(TuileTab(title: title, url: url, isPrivate: isPrivate))
+            let newTab = Tab(context: self.persistanceManager.context)
+            newTab.title = title
+            newTab.url = url
+            newTab.isPrivate = isPrivate ?? false
+            completion(newTab)
         }
     }
 }

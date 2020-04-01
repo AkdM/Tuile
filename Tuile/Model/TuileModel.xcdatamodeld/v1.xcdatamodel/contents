@@ -2,20 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="Tuile">
     <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="isPrivate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="windows" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Window"/>
+        <relationship name="windows" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Window"/>
     </entity>
     <entity name="Tab" representedClassName="Tab" syncable="YES">
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="URI"/>
     </entity>
     <entity name="Window" representedClassName="Window" syncable="YES">
-        <relationship name="tabs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tab"/>
+        <relationship name="tabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab"/>
     </entity>
     <elements>
-        <element name="Session" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Window" positionX="-63" positionY="0" width="128" height="58"/>
-        <element name="Tab" positionX="-54" positionY="9" width="128" height="73"/>
+        <element name="Session" positionX="-229.49609375" positionY="-236.40234375" width="128" height="88"/>
+        <element name="Tab" positionX="-126.1484375" positionY="74.59765625" width="128" height="88"/>
+        <element name="Window" positionX="-330.65234375" positionY="-50.5703125" width="128" height="58"/>
     </elements>
 </model>
