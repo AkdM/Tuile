@@ -13,6 +13,8 @@ class TuilePopover: NSView {
 
     let popoverTitle = NSTextField()
     let saveSessionButton = NSButton()
+    let scrollView = NSScrollView()
+    let tableView = NSTableView()
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -41,10 +43,30 @@ class TuilePopover: NSView {
         self.saveSessionButton.focusRingType = .none
         self.saveSessionButton.attributedTitle = NSMutableAttributedString(string: self.saveSessionButton.title,
                                                                            attributes: [.foregroundColor: NSColor.white])
+        
+        // Table View
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.tableView.headerView = nil
+        self.tableView.backgroundColor = .clear
+        self.tableView.appearance = NSAppearance(named: .vibrantDark)
+        
+        let nameColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "nameColumn"))
+        nameColumn.minWidth = 100
+        self.tableView.addTableColumn(nameColumn)
+        
+        
+        // Scroll View
+        self.scrollView.translatesAutoresizingMaskIntoConstraints = false
+        self.scrollView.backgroundColor = .clear
+        self.scrollView.drawsBackground = false
+        self.scrollView.documentView = self.tableView
+        self.scrollView.hasHorizontalScroller = false
+        self.scrollView.hasVerticalScroller = true
 
         // Adding subviews
         self.addSubview(self.popoverTitle)
         self.addSubview(self.saveSessionButton)
+        self.addSubview(self.scrollView)
     }
 
     func setupConstraints() {
@@ -56,7 +78,13 @@ class TuilePopover: NSView {
             // Save Session Button
             self.saveSessionButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0),
             self.saveSessionButton.leadingAnchor.constraint(equalTo: self.popoverTitle.trailingAnchor, constant: 10.0),
-            self.saveSessionButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10.0)
+            self.saveSessionButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10.0),
+            
+            // Scroll view
+            self.scrollView.topAnchor.constraint(equalTo: self.popoverTitle.bottomAnchor, constant: 10.0),
+            self.scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }
