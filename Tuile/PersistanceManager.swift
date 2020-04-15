@@ -41,6 +41,27 @@ final class PersistanceManager {
         }
     }
     
+    func delete<T: NSManagedObject>(_ objectType: T.Type, persist: Bool = true) -> Bool {
+        let entity = String(describing: objectType)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        
+        do {
+            let result = try? context.fetch(fetchRequest) as? [T]
+            for object in (result ?? [T]()) {
+                print("Deleted.")
+                context.delete(object)
+            }
+        } catch {
+            print("Deletion error: \(error)")
+            return false
+        }
+        
+        if persist {
+            self.save()
+        }
+        return true
+    }
+    
     func fetch<T: NSManagedObject>(_ objectType: T.Type) -> [T] {
         let entity = String(describing: objectType)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
