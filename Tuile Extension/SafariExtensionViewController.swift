@@ -27,6 +27,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.contextObjectsDidChange(_:)), name: Notification.Name.NSManagedObjectContextObjectsDidChange, object: nil)
+    }
+    
+    @objc func contextObjectsDidChange(_ sender: Any) -> Void {
+        tuilePopover.tableView.reloadData()
     }
     
     @objc func saveSessionButtonAction(_ sender: NSButton) -> Void {
