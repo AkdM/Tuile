@@ -11,6 +11,7 @@ import SafariServices
 class SafariExtensionViewController: SFSafariExtensionViewController, NSTableViewDelegate, NSTableViewDataSource {
     var tuilePopover = TuilePopover()
     let persistanceManager = PersistanceManager.shared
+    var sessions = PersistanceManager.shared.fetch(Session.self)
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
@@ -22,6 +23,11 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
         tuilePopover.saveSessionButton.action = #selector(self.saveSessionButtonAction(_:))
         tuilePopover.tableView.delegate = self
         tuilePopover.tableView.dataSource = self
+        
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Delete", action: #selector(tableViewDeleteItemClicked(_:)), keyEquivalent: ""))
+        tuilePopover.tableView.menu = menu
+
         self.view = tuilePopover
     }
     
@@ -32,31 +38,28 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
     }
     
     @objc func contextObjectsDidChange(_ sender: Any) -> Void {
+        sessions = PersistanceManager.shared.fetch(Session.self)
         tuilePopover.tableView.reloadData()
     }
     
     @objc func saveSessionButtonAction(_ sender: NSButton) -> Void {
         Tuile.shared.getSession(completion: { (session) in
-            do {
-                self.persistanceManager.save()
-                
+            self.persistanceManager.save()
+//            do {
 //                let jsonData = try JSONEncoder().encode(session)
 //                let jsonString = String(data: jsonData, encoding: .utf8)!
 //                print(jsonString)
-            } catch { print(error) }
+//            } catch { print(error) }
         })
     }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
-        let sessions = PersistanceManager.shared.fetch(Session.self)
         return sessions.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let sessions = PersistanceManager.shared.fetch(Session.self)
-
         let text = NSTextField()
-        let session = sessions[row]
+        let session = self.sessions[row]
         text.stringValue = session.title ?? ""
         let cell = NSTableCellView()
         cell.addSubview(text)
@@ -76,5 +79,11 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
         let rowView = NSTableRowView()
         rowView.isEmphasized = false
         return rowView
+    }
+
+    @objc private func tableViewDeleteItemClicked(_ sender: AnyObject) {
+        guard self.tuilePopover.tableView.clickedRow >= 0 else { return }
+        let session = self.sessions[self.tuilePopover.tableView.clickedRow]
+        persistanceManager.context.delete(session)
     }
 }
